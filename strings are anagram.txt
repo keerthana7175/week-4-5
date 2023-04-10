@@ -1,0 +1,27 @@
+//wap to find both strings are anagrams.
+import java.util.Scanner;
+import java.util.Arrays;
+
+class String15 {
+  public static void main(String[] args) {
+    Scanner s = new Scanner(System.in);
+    System.out.println("enter the first string: ");
+    String name1 = s.nextLine();
+    System.out.println("enter the second string: ");
+    String name2 = s.nextLine();
+    // String name1 = "Gajagatla";
+    // String name2 = "Keerthana";
+    name1 = name1.toLowerCase();
+    name2 = name2.toLowerCase();
+    char[] charArray1 = name1.toCharArray();
+    char[] charArray2 = name2.toCharArray();
+    Arrays.sort(charArray1);
+    Arrays.sort(charArray2);
+
+    if (Arrays.equals(charArray1, charArray2)) {
+      System.out.println(name1 + "  and  " + name2 + "  are anagrams");
+    } else {
+      System.out.println(name1 + "  and   " + name2 + "  are  not anagrams");
+    }
+  }
+}

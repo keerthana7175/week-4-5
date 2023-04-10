@@ -1,0 +1,19 @@
+//mutable or not
+import java.util.Scanner;
+
+class String18 {
+  public static void main(String[] args) {
+    Scanner s = new Scanner(System.in);
+    System.out.print("Enter a String: ");
+    String str1 = s.nextLine();
+    System.out.print("Enter a String to concat: ");
+    String str2 = s.nextLine();
+    String str3 = str1.concat(str2);
+
+    if (str1 == str3) {
+      System.out.println("String is immutable");
+    } else {
+      System.out.println("String is mutable");
+    }
+  }
+}

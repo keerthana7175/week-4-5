@@ -1,0 +1,27 @@
+//write a program to print unique words in a string
+public class String3 {
+  public static void main(String[] args) {
+    String str = "Hi hello welcome to bitlabs to bitlabs";
+    String[] words = str.split(" ");
+
+    String[] uniqueWords = new String[words.length];
+    int index = 0;
+
+    for (int i = 0; i < words.length; i++) {
+      String word = words[i];
+      for (i = 0; i < index; i++) {
+        if (uniqueWords[i].equals(word)) {
+          break;
+        }
+      }
+      if (i == index) {
+        uniqueWords[index++] = word;
+      }
+    }
+
+    System.out.println("Unique words:");
+    for (int i = 0; i < index; i++) {
+      System.out.println(uniqueWords[i]);
+    }
+  }
+}

@@ -1,0 +1,20 @@
+public class String5 {
+  public static void main(String[] args) {
+    String str = "Hi hello welcome to bitlabs";
+    String[] words = str.split(" ");
+
+    System.out.println("Number of words: " + words.length);
+
+    for (int i = 0; i < words.length; i++) {
+      int count = 0;
+      for (int j = 0; j < words[i].length(); j++) {
+        char c = words[i].charAt(j);
+        if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u' || c == 'A' || c == 'E' || c == 'I' || c == 'O'
+            || c == 'U') {
+          count++;
+        }
+      }
+      System.out.println("In:" + " " + words[i] + "   The no.of vowels are:" + count);
+    }
+  }
+}
